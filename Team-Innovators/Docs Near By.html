@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mentor</title>
+	
+	
+<title>Place Autocomplete</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body>
+  	
+    <div class="pac-card" id="pac-card">
+      <div>
+        <div id="title">Autocomplete search</div>
+        <div id="type-selector" class="pac-controls">
+          <input
+            type="radio"
+            name="type"
+            id="changetype-all"
+            checked="checked"
+          />
+          <label for="changetype-all">All</label>
+
+          <input type="radio" name="type" id="changetype-establishment" />
+          <label for="changetype-establishment">establishment</label>
+
+          <input type="radio" name="type" id="changetype-address" />
+          <label for="changetype-address">address</label>
+
+          <input type="radio" name="type" id="changetype-geocode" />
+          <label for="changetype-geocode">geocode</label>
+
+          <input type="radio" name="type" id="changetype-cities" />
+          <label for="changetype-cities">(cities)</label>
+
+          <input type="radio" name="type" id="changetype-regions" />
+          <label for="changetype-regions">(regions)</label>
+        </div>
+        <br />
+        <div id="strict-bounds-selector" class="pac-controls">
+          <input type="checkbox" id="use-location-bias" value="" checked />
+          <label for="use-location-bias">Bias to map viewport</label>
+
+          <input type="checkbox" id="use-strict-bounds" value="" />
+          <label for="use-strict-bounds">Strict bounds</label>
+        </div>
+      </div>
+      <div id="pac-container">
+        <input id="pac-input" type="text" placeholder="Enter a location" />
+      </div>
+    </div>
+    <div id="map"></div>
+    <div id="infowindow-content">
+      <span id="place-name" class="title"></span><br />
+      <span id="place-address"></span>
+    </div>
+<iframe src="https://my.atlistmaps.com/map/cd0f3984-86a5-4e6a-ade9-31637d002033?share=true" allow="geolocation" width="100%" height="400px" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=places&v=weekly"
+      defer
+    ></script>
+	<link rel="stylesheet" type="text/css" href="js.css
+    ">
+    <style>
+    	table, th, td{
+    		border: 2px solid;
+    	}
+    	table{
+    		width: 100%;
+    	}
+
+
+    </style>
+
+
+
+</head>
+<body>
+	<h2 id="demo"></h2>
+	<div id="ss">
+
+
+	<table>
+		<tr> 
+			<th>Hospital Name</th>
+			<th>Contact Number</th>
+			<th>Location</th>
+	
+
+		
+
+</tr>
+<tr><td>Kamboj Multispeciallity Hospital</td>
+<td>09814601096</td>
+<td><a href="https://maps.app.goo.gl/5MsdgCgQEfdMArHr6">https://maps.app.goo.gl/CzaQkpV2NimE6ysG7</a></td></tr>
+
+<tr><td>Chhabra Hospital</td>
+<td>092572 11962</td>
+<td><a href="https://maps.app.goo.gl/XVAEdEUxvmiLEUBXA">https://maps.app.goo.gl/XVAEdEUxvmiLEUBXA</a></td></tr>
+
+
+<tr><td>MALHOTRA SUPER SPECIALITY HOSPITAL</td>
+<td>086298 65692</td>
+<td><a href="https://maps.app.goo.gl/ZqgFD6uSYThGatRh9">https://maps.app.goo.gl/ZqgFD6uSYThGatRh9</a></td></tr>
+
+<tr><td>Khera Hospital</td>
+<td>098963 69484</td>
+<td><a href="https://maps.app.goo.gl/LXMdvqP15zgKTjQR9">https://maps.app.goo.gl/LXMdvqP15zgKTjQR9</a></td></tr>
+
+<tr><td>Malhotra Hospital
+</td>
+<td>098160 20120</td>
+<td><a href="https://maps.app.goo.gl/YcZXsPqsX4ggmHBz8">https://maps.app.goo.gl/YcZXsPqsX4ggmHBz8</a></td></tr>
+
+<tr><td>J N Shori Multispeciality Hospital</td>
+<td>01733 231 499</td>
+<td><a href="https://maps.app.goo.gl/7QR3uhVue9ySiujv6">https://maps.app.goo.gl/7QR3uhVue9ySiujv6</a></td></tr>
+
+<tr><td>Moon hospital</td>
+<td>098553 43430</td>
+<td><a href="https://maps.app.goo.gl/G9WUUC8bDxr6bDFc7">https://maps.app.goo.gl/G9WUUC8bDxr6bDFc7</a></td></tr>
+
+<tr><td>Gupta Hospital </td>
+<td>092184 00965</td>
+<td><a href="https://maps.app.goo.gl/Jcu6vfSHBfHCSAQMA">https://maps.app.goo.gl/Jcu6vfSHBfHCSAQMA</a></td></tr>
+
+<tr><td>Khurana Hospital</td>
+<td>072065 11800</td>
+<td><a href="https://maps.app.goo.gl/BK8c3KMuCLMpMAfJ6">https://maps.app.goo.gl/BK8c3KMuCLMpMAfJ6</a></td></tr>
+
+<tr><td>BROOKLYN HIMALAYA HOSPITAL</td>
+<td>060030 09001</td>
+<td><a href="https://maps.app.goo.gl/1yMZufCMUeZMgHgr5">https://maps.app.goo.gl/1yMZufCMUeZMgHgr5</a></td></tr>
+
+<tr><td>Cantonment Hospital</td>
+<td>01792 272 036</td>
+<td><a href="https://maps.app.goo.gl/bPNVE2pdYpHAfpmT9">https://maps.app.goo.gl/bPNVE2pdYpHAfpmT9</a></td></tr>
+
+
+
+
+	
+	
+
+
+
+</table>
+</div>
+
+
+
+
+</script>
+
+</body>
+</html>
